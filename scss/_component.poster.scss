@@ -1,0 +1,16 @@
+.c-poster {
+  display: flex;
+  &__img {
+    margin: 0 auto;
+    max-width: min(100%, 15rem);
+  }
+}
+
+@media screen and (min-width: $global-breakpoint-sm) {
+    .c-poster {
+        &__img {
+            max-width: 100%;
+            height: fit-content;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 // Settings
 @import "settings";
 
-// Reset
+// Generic
 @import "../node_modules/reset-css/sass/reset";
 
 // Elements
@@ -9,5 +9,14 @@
 
 // Objects
 @import "object.body";
+@import "object.header";
+@import "object.main";
+@import "object.footer";
+@import "object.movie";
 
 // Components
+@import "component.logo";
+@import "component.poster";
+
+// Utilities
+@import "utilities";

@@ -1,0 +1,9 @@
+.o-header {
+    display: flex;
+    align-items: center;
+    background-color: $global-header-BackgroundColor;
+    grid-area: "header";
+    &__content {
+        
+    }
+}

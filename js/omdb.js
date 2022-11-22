@@ -22,6 +22,7 @@ async function fetchMovieData(imdbId) {
   const movie = await res.json();
   movieTitle.innerHTML = movie.Title;
   movieImg.src = movie.Poster;
+
 }
 
 // Init

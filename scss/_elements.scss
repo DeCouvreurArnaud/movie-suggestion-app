@@ -4,11 +4,22 @@ body {
 }
 
 h1 {
-    color: $global-text-Color-bold;
-    font-size: 2.5rem;
+  color: $global-text-Color-bold;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  position: relative;
+  margin-bottom: 1.5rem;
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $global-accent-Color;
+    width: 3rem;
+    height: 0.2rem;
+    left: 0;
+    bottom: -0.5rem;
+  }
 }
 
 p {
-    color: $global-text-Color-regular;
-    font-size: 1rem;
+  color: $global-text-Color-regular;
+  font-size: 1rem;
 }
