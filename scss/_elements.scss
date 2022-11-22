@@ -1,0 +1,14 @@
+body {
+  background-color: $global-body-BackgroundColor;
+  color: $global-text-Color-regular;
+}
+
+h1 {
+    color: $global-text-Color-bold;
+    font-size: 2.5rem;
+}
+
+p {
+    color: $global-text-Color-regular;
+    font-size: 1rem;
+}

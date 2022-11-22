@@ -24,6 +24,7 @@
     "gulp-terser": "^2.1.0"
   },
   "dependencies": {
+    "reset-css": "^5.0.1",
     "sass": "^1.56.1"
   }
 }
