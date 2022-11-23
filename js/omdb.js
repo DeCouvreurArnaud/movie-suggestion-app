@@ -26,6 +26,8 @@ async function fetchMovieData(imdbId) {
   const url = `http://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`;
   const res = await fetch(`${url}`);
   const movie = await res.json();
+
+  // Display movie info
   movieTitle.textContent = movie.Title;
   movieImg.src = movie.Poster;
   movieYear.textContent = movie.Year;
@@ -39,9 +41,9 @@ async function fetchMovieData(imdbId) {
   const separatedArray = genreStr.split(', ');
   // Display genres
   separatedArray.forEach(genre => {
-    const li = document.createElement("li");
-    li.textContent = genre;
-    genreList.appendChild(li);
+    const genre = document.createElement("li");
+    genre.textContent = genre;
+    genreList.appendChild(genre);
   });
 }
 
