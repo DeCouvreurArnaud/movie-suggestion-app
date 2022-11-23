@@ -26,7 +26,7 @@ function getRandomMovieId() {
 
 // Fetch movie data from OMDB API
 async function fetchMovieData(imdbId) {
-  const url = `http://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`;
+  const url = `https://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`;
   const res = await fetch(`${url}`);
   const movie = await res.json();
 
