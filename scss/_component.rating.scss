@@ -1,0 +1,14 @@
+.c-rating {
+    margin: 2rem 0;
+    &__score {
+        color: $global-accent-Color;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: $global-breakpoint-md) {
+    .c-rating {
+        margin: 4rem 0;
+    }
+}
