@@ -1,9 +1,14 @@
 "use strict";
 
 // DOM elements
-const movieTitle = document.querySelector(".js-movie-title");
-const movieImg = document.querySelector(".js-movie-img");
 const button = document.querySelector(".js-button");
+const movieTitle = document.querySelector(".js-title");
+const movieImg = document.querySelector(".js-img");
+const movieYear = document.querySelector(".js-year");
+const moviePlot = document.querySelector(".js-plot");
+const movieDirector = document.querySelector(".js-director");
+const movieWriter = document.querySelector(".js-writer");
+const movieActors = document.querySelector(".js-actors");
 
 // API key
 const apiKey = "96fab62e";
@@ -20,16 +25,19 @@ async function fetchMovieData(imdbId) {
   const url = `http://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`;
   const res = await fetch(`${url}`);
   const movie = await res.json();
-  movieTitle.innerHTML = movie.Title;
+  movieTitle.textContent = movie.Title;
   movieImg.src = movie.Poster;
-
+  movieYear.textContent = movie.Year;
+  moviePlot.textContent = movie.Plot;
+  movieDirector.textContent = movie.Director;
+  movieWriter.textContent = movie.Writer;
+  movieActors.textContent = movie.Actors;
 }
 
 // Init
 window.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
   button.addEventListener("click", fetchMovieData(getRandomMovieId()));
-  console.log(imdbIdArray.length);
 });
 
 // IMDB IDs
@@ -53,5 +61,5 @@ const imdbIdArray = [
   "tt11813216",
   "tt12593682",
   "tt14715170",
-  "tt1745960"
+  "tt1745960",
 ];
