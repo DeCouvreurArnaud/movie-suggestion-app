@@ -12,6 +12,7 @@ const movieActors = document.querySelector(".js-actors");
 const genreList = document.querySelector(".js-genre-list");
 const movieScore = document.querySelector(".js-score");
 const result = document.querySelector(".js-result");
+const movieId = document.querySelector(".js-imdb");
 
 // API key
 const apiKey = "96fab62e";
@@ -38,6 +39,7 @@ async function fetchMovieData(imdbId) {
   movieWriter.textContent = movie.Writer;
   movieActors.textContent = movie.Actors;
   movieScore.textContent = movie.Metascore;
+  movieId.href = `https://www.imdb.com/title/${movie.imdbID}`;
 
   // Seperate string
   const genreStr = movie.Genre;
@@ -66,7 +68,6 @@ async function fetchMovieData(imdbId) {
       result.textContent = " - Underwhelming";
       break;
   }
-  console.log(rating);
 }
 
 // Init

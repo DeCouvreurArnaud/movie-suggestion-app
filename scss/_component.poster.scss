@@ -1,8 +1,23 @@
 .c-poster {
   display: flex;
+  flex-direction: column;
   &__img {
     margin: 0 auto;
     max-width: min(100%, 15rem);
+  }
+  a {
+    text-decoration: none;
+    color: $global-text-Color-regular;
+    width: fit-content;
+    margin: 1rem auto 1rem auto;
+    &:hover {
+      text-decoration: underline;
+    }
+    object {
+      width: 0.9rem;
+      transform: translate(0.2rem, 0.1rem);
+      pointer-events: none;
+    }
   }
 }
 
