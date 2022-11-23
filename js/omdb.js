@@ -9,6 +9,7 @@ const moviePlot = document.querySelector(".js-plot");
 const movieDirector = document.querySelector(".js-director");
 const movieWriter = document.querySelector(".js-writer");
 const movieActors = document.querySelector(".js-actors");
+const genreList = document.querySelector(".js-genre-list");
 
 // API key
 const apiKey = "96fab62e";
@@ -32,6 +33,16 @@ async function fetchMovieData(imdbId) {
   movieDirector.textContent = movie.Director;
   movieWriter.textContent = movie.Writer;
   movieActors.textContent = movie.Actors;
+
+  // Seperate string
+  const genreStr = movie.Genre;
+  const separatedArray = genreStr.split(', ');
+  // Display genres
+  separatedArray.forEach(genre => {
+    const li = document.createElement("li");
+    li.textContent = genre;
+    genreList.appendChild(li);
+  });
 }
 
 // Init

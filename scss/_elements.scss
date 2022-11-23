@@ -22,8 +22,10 @@ h1 {
 p {
   color: $global-text-Color-regular;
   font-size: 1rem;
+  line-height: 1.1rem;
 }
 
 strong {
   font-weight: 600;
+  color: $global-text-Color-bold;
 }

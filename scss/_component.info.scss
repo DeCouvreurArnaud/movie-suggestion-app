@@ -13,15 +13,19 @@
     padding-left: .5rem;
   }
   &__genre {
+    margin-bottom: 3rem;
     li {
       display: inline-block;
       padding: .4rem 1rem;
       border-radius: 200rem;
       border: solid 1px $global-accent-Color;
-      margin-bottom: 3rem;
+      margin-right: .4rem;
     }
   }
   &__plot {
     margin-bottom: 3rem;
+  }
+  &__list {
+    padding-bottom: 0.5rem;
   }
 }
