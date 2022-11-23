@@ -1,0 +1,24 @@
+// Settings
+@import "settings";
+
+// Generic
+@import "../node_modules/reset-css/sass/reset";
+
+// Elements
+@import "elements";
+
+// Objects
+@import "object.body";
+@import "object.header";
+@import "object.main";
+@import "object.footer";
+@import "object.movie";
+
+// Components
+@import "component.logo";
+@import "component.poster";
+@import "component.info";
+@import "component.button";
+
+// Utilities
+@import "utilities";

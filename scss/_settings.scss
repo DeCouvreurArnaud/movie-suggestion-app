@@ -1,0 +1,20 @@
+// Colors
+$global-body-BackgroundColor: #090909;
+$global-header-BackgroundColor: #0f0f0f;
+$global-accent-Color: #ff0000;
+$global-text-Color-light: #404040;
+$global-text-Color-regular: #cccccc;
+$global-text-Color-bold: #ffffff;
+
+// Container
+$global-container-MaxWidth: 1200px;
+
+// Breakpoints
+$global-breakpoint-sm: 767px;
+$global-breakpoint-md: 1024px;
+$global-breakpoint-lg: 1200px;
+
+
+:root {
+    font-family: Lato, sans-serif;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suggest A Movie</title>
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="shortcut icon" href="assets/favicon.svg">
+  </head>
+  <body class="o-body">
+    <header class="o-header">
+      <div class="o-header__content u-container">
+        <object class="c-logo" data="assets/logo.svg" type=""></object>
+      </div>
+    </header>
+    <main class="o-main">
+      <div class="o-main__content u-container">
+        <div class="o-movie">
+          <div class="o-movie__poster c-poster">
+            <img src="" alt="" class="js-img c-poster__img" />
+          </div>
+          <div class="o-movie__info c-info">
+            <div class="c-info__title">
+              <h1><span class="js-title"></span><span class="js-year c-info__year"></span></h1>
+            </div>
+            <ul class="js-genre-list c-info__genre"></ul>
+            <p class="js-plot c-info__plot"></p>
+            <p class="c-info__list"><strong>Director: </strong><span class="js-director"></span></p>
+            <p class="c-info__list"><strong>Writer: </strong><span class="js-writer"></span></p>
+            <p class="c-info__list"><strong>Actors: </strong><span class="js-actors"></span></p>
+          </div>
+          <div class="o-movie__rating">
+            <h1>Rating</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="o-footer">
+      <div class="o-footer__content u-container">
+        <a href="" class="js-button c-button">Suggest a new movie</a>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="dist/js/omdb.js" type="module"></script>
+  </body>
+</html>

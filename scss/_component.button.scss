@@ -1,0 +1,26 @@
+.c-button {
+    border: 1px solid $global-accent-Color;
+    padding: 0.8rem 1.5rem;
+    border-radius: 200rem;
+    color: $global-text-Color-bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    background-color: $global-body-BackgroundColor;
+    transition: border-width .1s ease;
+    &:hover {
+        cursor: pointer;
+        border-width: 3px;
+    }
+    &::before {
+        content: "Not convinced?";
+        color: $global-text-Color-light;
+        position: absolute;
+        top: -1.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        pointer-events: none;
+        font-size: 1rem;
+    }
+}
