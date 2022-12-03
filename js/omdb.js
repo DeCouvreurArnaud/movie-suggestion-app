@@ -33,6 +33,7 @@ async function fetchMovieData(imdbId) {
   // Display movie info
   movieTitle.textContent = movie.Title;
   movieImg.src = movie.Poster;
+  movieImg.alt = movie.Title;
   movieYear.textContent = movie.Year;
   moviePlot.textContent = movie.Plot;
   movieDirector.textContent = movie.Director;
