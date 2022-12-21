@@ -2,3 +2,11 @@
   max-width: $global-container-MaxWidth;
   margin: 0 auto;
 }
+
+.u-hidden {
+  display: none;
+}
+
+.u-modal-open {
+  overflow: hidden !important;
+}

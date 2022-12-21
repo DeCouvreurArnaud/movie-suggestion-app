@@ -1,9 +1,9 @@
 .o-body {
-    display: grid;
-    min-height: 100vh;
-    grid-template-areas: 
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
     "header"
     "body"
     "footer";
-    grid-template-rows: 4.5rem auto 8rem;
+  grid-template-rows: 4.5rem auto 8rem;
 }

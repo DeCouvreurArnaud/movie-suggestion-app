@@ -13,6 +13,9 @@ const genreList = document.querySelector(".js-genre-list");
 const movieScore = document.querySelector(".js-score");
 const result = document.querySelector(".js-result");
 const movieId = document.querySelector(".js-imdb");
+const modal = document.querySelector(".js-modal");
+const modalButton = document.querySelector(".js-modal-details");
+const modalOverlay = document.querySelector(".js-modal-overlay");
 
 // API key
 const apiKey = "96fab62e";
@@ -71,10 +74,34 @@ async function fetchMovieData(imdbId) {
   }
 }
 
+function openModal() {
+  modalButton.addEventListener("click", () => {
+    modal.classList.remove("u-hidden");
+    modal.classList.add("u-modal-open");
+  });
+}
+
+function closeModal() {
+  modalOverlay.addEventListener("click", () => {
+    modal.classList.add("u-hidden");
+  })
+  modalClose.addEventListener("click", () => {
+    modal.classList.add("u-hidden");
+  })
+}
+
 // Init
 window.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
+
+  // generate new movie
   button.addEventListener("click", fetchMovieData(getRandomMovieId()));
+
+  // open modal
+  openModal();
+
+  // close modal
+  closeModal();
 });
 
 // IMDB IDs
@@ -128,5 +155,5 @@ const imdbIdArray = [
   "tt1675434",
   "tt0078748",
   "tt1853728",
-  "tt0082971"
+  "tt0082971",
 ];
