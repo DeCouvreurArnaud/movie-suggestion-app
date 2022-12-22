@@ -10,7 +10,8 @@
     color: $global-text-Color-regular;
     width: fit-content;
     margin: 1rem auto 1rem auto;
-    &:hover {
+    &:hover, &:focus {
+      outline: none;
       text-decoration: underline;
     }
     object {
@@ -22,10 +23,10 @@
 }
 
 @media screen and (min-width: $global-breakpoint-sm) {
-    .c-poster {
-        &__img {
-            max-width: 100%;
-            height: fit-content;
-        }
+  .c-poster {
+    &__img {
+      max-width: 100%;
+      height: fit-content;
     }
+  }
 }

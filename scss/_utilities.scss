@@ -2,3 +2,36 @@
   max-width: $global-container-MaxWidth;
   margin: 0 auto;
 }
+
+.u-hidden {
+  display: none;
+}
+
+.u-transition-overlay {
+  animation: modalFadein 0.3s 1 ease-out;
+}
+
+.u-transition-modal {
+  animation: modalContentFadein 0.3s 1 ease-out;
+}
+
+@keyframes modalFadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes modalContentFadein {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,39 @@
+.c-details {
+  display: block;
+  margin-top: 2rem;
+  color: $global-text-Color-regular;
+  text-decoration: underline;
+  font-size: 1rem;
+  position: relative;
+  background-color: $global-body-BackgroundColor;
+  border: none;
+  z-index: 1;
+  position: relative;
+  transition: color 0.3s ease-out;
+  &__chevron {
+    position: absolute;
+    width: 0.9rem;
+    padding-top: 0.1rem;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-out, right 0.3s ease-out;
+  }
+  &:hover, &:focus {
+    cursor: pointer;
+    color: $global-text-Color-bold;
+    outline: none;
+    .c-details__chevron {
+      opacity: 1;
+      right: -1rem;
+    }
+  }
+}
+
+@media screen and (min-width: $global-breakpoint-md) {
+  .c-details {
+    margin-top: 3rem;
+  }
+}

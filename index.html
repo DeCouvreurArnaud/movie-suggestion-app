@@ -8,54 +8,106 @@
     <link rel="stylesheet" href="dist/css/style.css" />
     <link rel="shortcut icon" href="assets/favicon.svg" />
   </head>
-  <body class="o-body">
-    <header class="o-header">
-      <div class="o-header__content u-container">
-        <object class="c-logo" data="assets/logo.svg" type=""></object>
-      </div>
-    </header>
-    <main class="o-main">
-      <div class="o-main__content u-container">
-        <div class="o-movie">
-          <div class="o-movie__poster c-poster">
-            <img src="" alt="" class="js-img c-poster__img" />
-            <a class="js-imdb" href="" target="_blank">View on imdb<object data="assets/external-link.svg" type=""></object></a>
-          </div>
-          <div class="o-movie__info c-info">
-            <div class="c-info__title">
-              <h1>
-                <span class="js-title"></span
-                ><span class="js-year c-info__year"></span>
-              </h1>
+
+  <body class="">
+    <div class="o-body">
+      <header class="o-header">
+        <div class="o-header__content u-container">
+          <object class="c-logo" data="assets/logo.svg" type=""></object>
+        </div>
+      </header>
+      <main class="o-main">
+        <div class="o-main__content u-container">
+          <div class="o-movie">
+            <div class="o-movie__poster c-poster">
+              <img src="" alt="" class="js-img c-poster__img" />
+              <a class="js-imdb" href="" target="_blank"
+                >View on imdb<object
+                  data="assets/external-link.svg"
+                  type=""
+                ></object
+              ></a>
             </div>
-            <ul class="js-genre-list c-info__genre"></ul>
-            <p class="js-plot c-info__plot"></p>
-            <p class="c-info__list">
-              <strong>Director: </strong><span class="js-director"></span>
-            </p>
-            <p class="c-info__list">
-              <strong>Writer: </strong><span class="js-writer"></span>
-            </p>
-            <p class="c-info__list">
-              <strong>Actors: </strong><span class="js-actors"></span>
-            </p>
+            <div class="o-movie__info c-info">
+              <div class="c-info__title">
+                <h1>
+                  <span class="js-title"></span
+                  ><span class="js-year c-info__year"></span>
+                </h1>
+              </div>
+              <ul class="js-genre-list c-info__genre"></ul>
+              <p class="js-plot c-info__plot"></p>
+              <p class="c-info__list">
+                <strong>Director: </strong><span class="js-director"></span>
+              </p>
+              <p class="c-info__list">
+                <strong>Writers: </strong><span class="js-writer"></span>
+              </p>
+              <p class="c-info__list">
+                <strong>Actors: </strong><span class="js-actors"></span>
+              </p>
+            </div>
+            <div class="o-movie__rating">
+              <h1>Rating</h1>
+              <div class="c-rating">
+                <span class="c-rating__score js-score"></span>
+                <span class="c-rating__result js-result"></span>
+                <button class="c-details js-modal-details">
+                  More details
+                  <object
+                    class="c-details__chevron"
+                    data="assets/chevron-right.svg"
+                    type=""
+                  ></object>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="o-movie__rating">
-            <h1>Rating</h1>
-            <div class="c-rating">
-              <span class="c-rating__score js-score"></span>
-              <span class="c-rating__result js-result"></span>
+        </div>
+      </main>
+      <footer class="o-footer">
+        <div class="o-footer__content u-container">
+          <a href="" class="js-button c-button">Suggest a new movie</a>
+        </div>
+      </footer>
+    </div>
+    <div class="c-modal js-modal u-hidden">
+      <div class="c-modal__overlay js-modal-overlay"></div>
+      <div class="c-modal__content js-modal-content">
+        <span class="c-modal__close js-modal-close">x</span>
+        <h1>Info</h1>
+        <div class="c-modal__details">
+          <div class="c-modal__col">
+            <div class="c-modal__info">
+              <strong>Runtime: </strong><span class="js-runtime"></span>
+            </div>
+            <div class="c-modal__info">
+              <strong>Released: </strong><span class="js-released"></span>
+            </div>
+            <div class="c-modal__info">
+              <strong>Rated: </strong><span class="js-rated"></span>
+            </div>
+            <div class="c-modal__info">
+              <strong>Language: </strong><span class="js-language"></span>
+            </div>
+          </div>
+          <div class="c-modal__col">
+            <div class="c-modal__info">
+              <strong>Country: </strong><span class="js-country"></span>
+            </div>
+            <div class="c-modal__info">
+              <strong>Awards: </strong><span class="js-awards"></span>
+            </div>
+            <div class="c-modal__info">
+              <strong>BoxOffice: </strong><span class="js-boxoffice"></span>
+            </div>
+            <div class="c-modal__info">
+              <strong>DVD: </strong><span class="js-dvd"></span>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer class="o-footer">
-      <div class="o-footer__content u-container">
-        <a href="" class="js-button c-button">Suggest a new movie</a>
-      </div>
-    </footer>
-
+    </div>
     <!-- JS -->
     <script src="dist/js/omdb.js" type="module"></script>
   </body>

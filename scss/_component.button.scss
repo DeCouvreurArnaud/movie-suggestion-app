@@ -8,7 +8,8 @@
   position: relative;
   background-color: $global-body-BackgroundColor;
   transition: border-width 0.1s ease;
-  &:hover {
+  &:hover, &:focus {
+    outline: none;
     cursor: pointer;
     border-width: 3px;
   }
