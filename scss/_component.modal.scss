@@ -7,16 +7,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  h1 {
+    margin-bottom: 2rem;
+  }
   &__overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.416);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.5s ease;
   }
 
   &__content {
     background-color: black;
     margin: 1rem;
-    padding: 2rem;
+    padding: 2.5rem;
     z-index: 2;
     position: relative;
     max-height: 60vh;
@@ -32,5 +36,25 @@
     cursor: pointer;
     padding: 0.6rem 1rem;
     user-select: none;
+  }
+  &__info {
+    margin-bottom: 0.8rem;
+  }
+  &__details {
+    display: grid;
+    column-gap: 2rem;
+  }
+}
+
+.js-modal-overlay {
+  transition: 0.5s ease;
+}
+
+@media screen and (min-width: $global-breakpoint-sm) {
+  .c-modal {
+    &__details {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr auto;
+    }
   }
 }

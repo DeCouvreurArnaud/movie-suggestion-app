@@ -22,10 +22,10 @@
 }
 
 @media screen and (min-width: $global-breakpoint-sm) {
-    .c-poster {
-        &__img {
-            max-width: 100%;
-            height: fit-content;
-        }
+  .c-poster {
+    &__img {
+      max-width: 100%;
+      height: fit-content;
     }
+  }
 }

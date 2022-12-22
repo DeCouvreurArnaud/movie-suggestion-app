@@ -9,6 +9,13 @@ const moviePlot = document.querySelector(".js-plot");
 const movieDirector = document.querySelector(".js-director");
 const movieWriter = document.querySelector(".js-writer");
 const movieActors = document.querySelector(".js-actors");
+const movieRuntime = document.querySelector(".js-runtime");
+const movieReleased = document.querySelector(".js-released");
+const movieRated = document.querySelector(".js-rated");
+const movieLanguage = document.querySelector(".js-language");
+const movieCountry = document.querySelector(".js-country");
+const movieAwards = document.querySelector(".js-awards");
+const movieBoxOffice = document.querySelector(".js-boxoffice");
 const genreList = document.querySelector(".js-genre-list");
 const movieScore = document.querySelector(".js-score");
 const result = document.querySelector(".js-result");
@@ -16,6 +23,8 @@ const movieId = document.querySelector(".js-imdb");
 const modal = document.querySelector(".js-modal");
 const modalButton = document.querySelector(".js-modal-details");
 const modalOverlay = document.querySelector(".js-modal-overlay");
+const modalClose = document.querySelector(".js-modal-close");
+const modalContent = document.querySelector(".js-modal-content");
 
 // API key
 const apiKey = "96fab62e";
@@ -44,6 +53,13 @@ async function fetchMovieData(imdbId) {
   movieActors.textContent = movie.Actors;
   movieScore.textContent = movie.Metascore;
   movieId.href = `https://www.imdb.com/title/${movie.imdbID}`;
+  movieRuntime.textContent = movie.Runtime;
+  movieReleased.textContent = movie.Released;
+  movieRated.textContent = movie.Rated;
+  movieLanguage.textContent = movie.Language;
+  movieCountry.textContent = movie.Country;
+  movieAwards.textContent = movie.Awards;
+  movieBoxOffice.textContent = movie.BoxOffice;
 
   // Seperate string
   const genreStr = movie.Genre;
@@ -77,17 +93,22 @@ async function fetchMovieData(imdbId) {
 function openModal() {
   modalButton.addEventListener("click", () => {
     modal.classList.remove("u-hidden");
-    modal.classList.add("u-modal-open");
+    modalContent.classList.add("u-transition-modal");
+    modalOverlay.classList.add("u-transition-overlay");
   });
 }
 
 function closeModal() {
   modalOverlay.addEventListener("click", () => {
     modal.classList.add("u-hidden");
-  })
+    modalContent.classList.remove("u-transition-modal");
+    modalOverlay.classList.remove("u-transition-overlay");
+  });
   modalClose.addEventListener("click", () => {
     modal.classList.add("u-hidden");
-  })
+    modalContent.classList.remove("u-transition-modal");
+    modalOverlay.classList.remove("u-transition-overlay");
+  });
 }
 
 // Init
