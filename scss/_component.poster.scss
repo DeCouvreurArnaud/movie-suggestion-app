@@ -10,7 +10,8 @@
     color: $global-text-Color-regular;
     width: fit-content;
     margin: 1rem auto 1rem auto;
-    &:hover {
+    &:hover, &:focus {
+      outline: none;
       text-decoration: underline;
     }
     object {

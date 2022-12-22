@@ -16,6 +16,7 @@ const movieLanguage = document.querySelector(".js-language");
 const movieCountry = document.querySelector(".js-country");
 const movieAwards = document.querySelector(".js-awards");
 const movieBoxOffice = document.querySelector(".js-boxoffice");
+const movieDvd = document.querySelector(".js-dvd");
 const genreList = document.querySelector(".js-genre-list");
 const movieScore = document.querySelector(".js-score");
 const result = document.querySelector(".js-result");
@@ -60,6 +61,7 @@ async function fetchMovieData(imdbId) {
   movieCountry.textContent = movie.Country;
   movieAwards.textContent = movie.Awards;
   movieBoxOffice.textContent = movie.BoxOffice;
+  movieDvd.textContent = movie.DVD;
 
   // Seperate string
   const genreStr = movie.Genre;

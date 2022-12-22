@@ -8,11 +8,11 @@
 }
 
 .u-transition-overlay {
-  animation: modalFadein 0.3s 1;
+  animation: modalFadein 0.3s 1 ease-out;
 }
 
 .u-transition-modal {
-  animation: modalContentFadein 0.3s 1;
+  animation: modalContentFadein 0.3s 1 ease-out;
 }
 
 @keyframes modalFadein {
