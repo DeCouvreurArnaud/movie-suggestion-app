@@ -93,6 +93,7 @@ async function fetchMovieData(imdbId) {
 function openModal() {
   modalButton.addEventListener("click", () => {
     modal.classList.remove("u-hidden");
+    modal.style
     modalContent.classList.add("u-transition-modal");
     modalOverlay.classList.add("u-transition-overlay");
   });
